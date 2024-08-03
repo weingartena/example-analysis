@@ -1,0 +1,72 @@
+---
+title: "analysis"
+date: today
+embed-resources: true
+format: 
+  html:
+    code-fold: true
+    toc: true
+editor_options: 
+  chunk_output_type: console
+bibliography: references.bib
+---
+
+```{r, setup}
+#| warning: false
+library(tinytex)
+```
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:[@axtell2021]
+
+@axtell2021 blah blah blah
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
+
+## Olympic Sports I've Watched
+
+-   Swimming
+-   Gymnastics
+-   Shooting
+
+```{r}
+#| eval: false
+
+writeLines(c(
+  '\\documentclass{article}',
+  '\\begin{document}', 'Hello World!', '\\end{document}'
+), 'text.tex')
+tinytex::pdflatex('test.tex')
+```
+
+::: {#fig-camels-combo layout-ncol="2"}
+![stenomylus](images/Stenomylus.jpg){#fig-stenomylus}
+
+![Hanno](images/camels.jpeg){#fig-camels}
+
+Stenomylus and Camels
+:::
+
+## Cross references {#sec-cross-references}
+
+$$
+dist = \hat{\beta}_0 + \hat{\beta}_1 \times speed + \epsilon
+$$ {#eq-slr}
+
+Practice reference @eq-slr
