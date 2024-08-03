@@ -70,3 +70,11 @@ dist = \hat{\beta}_0 + \hat{\beta}_1 \times speed + \epsilon
 $$ {#eq-slr}
 
 Practice reference @eq-slr
+
+Practice making changes
+
+```{r}
+2+7
+5+3
+```
+
